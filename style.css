@@ -585,3 +585,16 @@ body {
     font-size: .8em;
     font-weight: 400
 }
+
+.diagram.compact {
+    align-self: start;
+    gap: 0
+}
+
+.diagram.compact .diagram-node {
+    padding: .4em .6em
+}
+
+.diagram-node.accent {
+    border-color: var(--tableau-blue)
+}

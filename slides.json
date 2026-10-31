@@ -8,5 +8,6 @@
   "007-transformer.html",
   "008-tokens.html",
   "009-embeddings.html",
-  "010-gpt3.html"
+  "010-gpt3.html",
+  "011-rag.html"
 ]
