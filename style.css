@@ -493,3 +493,27 @@ body {
     font: 700 22px Arial, Helvetica, sans-serif;
     text-anchor: middle
 }
+
+.attention {
+    width: 100%;
+    height: 100%;
+    min-height: 0
+}
+
+.attention path {
+    fill: none
+}
+
+.attention text {
+    font: 22px Arial, Helvetica, sans-serif;
+    text-anchor: middle
+}
+
+.attention .key {
+    font-weight: 700
+}
+
+.attention .note {
+    font-size: 17px;
+    fill: #555
+}
