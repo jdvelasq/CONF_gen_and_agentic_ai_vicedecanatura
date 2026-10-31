@@ -517,3 +517,49 @@ body {
     font-size: 17px;
     fill: #555
 }
+
+.tokens-body {
+    display: flex;
+    flex-direction: column
+}
+
+.tokens {
+    flex: 1;
+    width: 100%;
+    min-height: 0
+}
+
+.tokens text {
+    font: 26px Arial, Helvetica, sans-serif
+}
+
+.tokens .chip text {
+    font-weight: 700;
+    text-anchor: middle
+}
+
+.tokens .chip rect {
+    rx: 6px
+}
+
+.tokens .next {
+    fill: #fff;
+    stroke: var(--tableau-orange);
+    stroke-width: 2;
+    stroke-dasharray: 5 4
+}
+
+.tokens .branch path {
+    fill: none;
+    stroke: var(--tableau-orange);
+    stroke-width: 2.5
+}
+
+.tokens .option tspan {
+    font-weight: 700
+}
+
+.tokens .note {
+    font-size: 16px;
+    fill: #555
+}
