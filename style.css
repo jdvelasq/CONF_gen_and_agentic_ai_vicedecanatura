@@ -181,7 +181,7 @@ body {
 
 .explanation ul {
     margin: .3em 0 1em;
-    padding-left: 1.2em
+    padding-left: .8em
 }
 
 .explanation li {
@@ -577,4 +577,11 @@ body {
 .embedding-map .note {
     font-size: 16px;
     fill: #555
+}
+
+.diagram-node small {
+    display: block;
+    margin-top: .3em;
+    font-size: .8em;
+    font-weight: 400
 }

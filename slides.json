@@ -7,5 +7,6 @@
   "006-vocabulario-base.html",
   "007-transformer.html",
   "008-tokens.html",
-  "009-embeddings.html"
+  "009-embeddings.html",
+  "010-gpt3.html"
 ]
