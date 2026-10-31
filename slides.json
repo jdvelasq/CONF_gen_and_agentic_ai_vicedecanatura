@@ -6,5 +6,6 @@
   "005-statement-cimientos.html",
   "006-vocabulario-base.html",
   "007-transformer.html",
-  "008-tokens.html"
+  "008-tokens.html",
+  "009-embeddings.html"
 ]
