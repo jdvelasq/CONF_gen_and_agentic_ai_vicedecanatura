@@ -1387,3 +1387,82 @@ body {
     color: #444;
     font-size: .9em
 }
+
+.vision-body {
+    display: grid;
+    grid-template-columns: 26% 1fr 26%;
+    grid-template-rows: 1fr auto auto;
+    gap: .7em 1.5%;
+    height: 90%;
+    padding: 1.2% 1.5% 2.5%;
+    font-size: clamp(12px, 1.5vw, 2.7vh);
+    line-height: 1.22
+}
+
+.vision-body .cg-start,
+.vision-body .cg-key {
+    align-self: start
+}
+
+.vision-chat .cg-messages {
+    gap: 1.2em;
+    justify-content: center
+}
+
+.vision-ask {
+    display: flex;
+    justify-content: space-between;
+    gap: .6em
+}
+
+.vision-ask svg {
+    width: 45%;
+    max-height: 13em
+}
+
+.vision-chips {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    gap: .7em;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.vision-chips li {
+    padding: .4em 1em;
+    border-radius: .5em;
+    background: #eee
+}
+
+.vision-pair {
+    grid-column: 1 / -1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1em
+}
+
+.vision-pair div {
+    display: flex;
+    flex-direction: column;
+    min-width: 28%;
+    padding: .5em 1em;
+    border: 1px solid var(--tableau-gray);
+    border-radius: .5em;
+    background: #eee;
+    text-align: center
+}
+
+.vision-pair strong {
+    font-size: 1.25em
+}
+
+.vision-pair span {
+    color: #444
+}
+
+.vision-pair b {
+    font-size: 2em
+}
