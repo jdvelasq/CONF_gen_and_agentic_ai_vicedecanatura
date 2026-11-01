@@ -2054,3 +2054,66 @@ body {
     color: #fff;
     text-align: center
 }
+
+.reason-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2.5%;
+    height: 90%;
+    padding: 1.5% 2.5% 3%;
+    font-size: clamp(11px, 1.4vw, 2.5vh);
+    line-height: 1.22
+}
+
+.reason-intro {
+    margin: 0
+}
+
+.reason-row {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 7% 45% 1fr;
+    gap: 1.5%;
+    align-items: center;
+    min-height: 0
+}
+
+.reason-row h3 {
+    margin: 0;
+    color: var(--tableau-blue);
+    font-size: 1.05em
+}
+
+.reason-row .voice-flow {
+    margin: 0;
+    font-size: 1.05em;
+    gap: .35em
+}
+
+.reason-row .voice-flow span {
+    padding: .5em .6em
+}
+
+.reason-notes {
+    display: flex;
+    gap: .6em;
+    align-items: stretch
+}
+
+.reason-notes > * {
+    flex: 1;
+    margin: 0;
+    padding: .5em .7em;
+    border: 2px solid var(--tableau-orange);
+    border-radius: .5em
+}
+
+.reason-notes .blue {
+    align-self: center;
+    border-color: var(--tableau-blue)
+}
+
+.reason-notes ul {
+    margin: .2em 0 0;
+    padding-left: 1em
+}
