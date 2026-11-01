@@ -1637,3 +1637,89 @@ body {
 .lock-note {
     margin: 0
 }
+
+.quant-body {
+    display: flex;
+    flex-direction: column;
+    gap: 2%;
+    height: 90%;
+    padding: 1.2% 1.5% 2.5%;
+    font-size: clamp(12px, 1.5vw, 2.7vh);
+    line-height: 1.22
+}
+
+.quant-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 25%
+}
+
+.quant-top aside {
+    flex: 1;
+    align-self: flex-start
+}
+
+.quant-terms {
+    display: flex;
+    flex-direction: column;
+    gap: .25em;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.quant-levels {
+    flex: 1;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 4%;
+    min-height: 0;
+    padding: 0 8%
+}
+
+.quant-level {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    gap: .35em;
+    min-height: 0
+}
+
+.quant-card {
+    display: flex;
+    flex-direction: column;
+    height: var(--h);
+    padding: .3em .6em;
+    border: 2px solid var(--tableau-blue);
+    border-radius: .5em
+}
+
+.quant-card strong {
+    color: var(--tableau-blue);
+    font-size: 1.7em
+}
+
+.quant-level p {
+    display: grid;
+    grid-template-columns: 4.5em 1fr;
+    gap: .4em;
+    align-items: center;
+    margin: 0
+}
+
+.quant-level i {
+    position: relative;
+    height: .8em;
+    border-radius: .4em;
+    background: #ddd;
+    overflow: hidden
+}
+
+.quant-level i::after {
+    content: "";
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: var(--w);
+    border-radius: .4em;
+    background: var(--c)
+}
