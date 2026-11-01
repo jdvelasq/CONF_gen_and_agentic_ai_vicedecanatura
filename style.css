@@ -2994,3 +2994,9 @@ body {
 .columns > .v-visual > .sd-cycle {
     font-size: 1em
 }
+
+/* Las viñetas y la visual arrancan justo debajo de la frase introductoria. */
+.columns > .explanation,
+.columns > .v-visual {
+    justify-content: flex-start
+}
