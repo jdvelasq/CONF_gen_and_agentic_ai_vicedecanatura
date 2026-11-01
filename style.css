@@ -1942,3 +1942,55 @@ body {
     justify-content: flex-start;
     gap: .8em
 }
+
+.voice-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 6%;
+    height: 90%;
+    padding: 2% 6%;
+    font-size: clamp(14px, 1.9vw, 3.4vh);
+    line-height: 1.25
+}
+
+.voice-row h3 {
+    margin: 0 0 .4em;
+    color: var(--tableau-blue);
+    font-size: 1.1em
+}
+
+.voice-flow {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: .6em;
+    margin: 0 0 .7em;
+    font-size: 1.3em;
+    font-weight: 700
+}
+
+.voice-flow span {
+    padding: .45em .9em;
+    border: 2px solid var(--tableau-gray);
+    border-radius: .4em;
+    background: #f7f7f7
+}
+
+.voice-flow .llm {
+    border-color: var(--tableau-blue);
+    background: var(--tableau-blue);
+    color: #fff
+}
+
+.voice-note {
+    margin: 0 auto;
+    padding: .5em .9em;
+    width: fit-content;
+    border: 1px solid var(--tableau-gray);
+    border-radius: .5em
+}
+
+.voice-note.lost {
+    border: 2px solid var(--tableau-orange)
+}
