@@ -2160,3 +2160,23 @@ body {
 .columns > .v-visual {
     justify-content: flex-start
 }
+
+/* Las slides sirven de consulta: el ejemplo ayuda a aplicar el concepto después. */
+.v-example {
+    margin: 1em 0 0;
+    padding: .6em .8em;
+    border-left: .3em solid var(--tableau-blue);
+    background: #f7f7f7
+}
+
+.columns > .explanation {
+    font-size: 1.08em
+}
+
+.columns > .explanation li {
+    margin-bottom: .5em
+}
+
+.columns > .v-visual {
+    font-size: 1.12em
+}
