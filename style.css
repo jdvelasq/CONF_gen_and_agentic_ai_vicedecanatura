@@ -1874,3 +1874,71 @@ body {
 .mem-cards strong {
     font-size: 1.3em
 }
+
+.search-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    height: 90%;
+    padding: 1.5% 6% 3.5%;
+    font-size: clamp(12px, 1.5vw, 2.7vh);
+    line-height: 1.22
+}
+
+.search-note {
+    margin: 0 auto;
+    padding: .6em .8em;
+    width: 70%;
+    border: 2px solid var(--tableau-orange);
+    border-radius: .5em
+}
+
+.search-cols {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5%;
+    min-height: 0
+}
+
+.search-col {
+    display: flex;
+    flex-direction: column;
+    gap: .7em;
+    min-height: 0
+}
+
+.search-card {
+    flex: 0 0 7.5em;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: .2em;
+    padding: .4em .7em;
+    border: 1px solid var(--tableau-gray);
+    border-radius: .5em;
+    text-align: center
+}
+
+.search-card strong {
+    font-size: 1.25em
+}
+
+.search-card span {
+    font-size: .92em
+}
+
+.search-links {
+    justify-content: flex-start;
+    gap: .7em
+}
+
+.search-links p {
+    color: var(--tableau-blue);
+    text-decoration: underline
+}
+
+.search-answer {
+    justify-content: flex-start;
+    gap: .8em
+}
