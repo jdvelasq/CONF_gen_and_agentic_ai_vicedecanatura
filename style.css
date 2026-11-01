@@ -2117,3 +2117,45 @@ body {
     margin: .2em 0 0;
     padding-left: 1em
 }
+
+.cloud-body {
+    display: flex;
+    flex-direction: column;
+    gap: 3%;
+    height: 90%;
+    padding: 2% 4% 3%;
+    font-size: clamp(11px, 1.5vw, 2.7vh)
+}
+
+.cloud-table {
+    width: 100%;
+    border-collapse: collapse
+}
+
+.cloud-table th,
+.cloud-table td {
+    padding: .5em .7em;
+    border-bottom: 1px solid var(--tableau-gray);
+    text-align: left;
+    font-weight: 400
+}
+
+.cloud-table thead th {
+    color: var(--tableau-blue);
+    font-weight: 700
+}
+
+.cloud-table small {
+    display: block;
+    font-size: .8em
+}
+
+.cloud-table .win::before {
+    content: "● ";
+    color: var(--tableau-blue)
+}
+
+.reason-warning {
+    margin: 0;
+    font-weight: 700
+}

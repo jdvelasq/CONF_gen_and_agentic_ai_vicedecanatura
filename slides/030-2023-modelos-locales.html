@@ -1,19 +1,25 @@
-<section class="slide content" aria-label="2023: la IA en el propio computador">
+<section class="slide content" aria-label="2023: nube o local, depende de la tarea">
     <header class="slide-heading">
-        <h2>2023: la IA en el propio computador</h2>
+        <h2>2023 · Nube o local: depende de la tarea</h2>
     </header>
-    <div class="content-body">
-        <p class="intro">Un modelo local mantiene la inferencia en el equipo, a cambio de menor capacidad y de exigir más hardware.</p>
-        <div class="columns">
-            <div class="explanation">
-                <ul>
-                    <li><strong>Modelo local:</strong> se ejecuta en el equipo del usuario.</li>
-                    <li><strong>Nube:</strong> se ejecuta en servidores del proveedor.</li>
-                    <li>LM Studio y Ollama (2023) facilitan descargarlos y usarlos.</li>
-                    <li><strong>Límites:</strong> memoria, formato y rendimiento del equipo.</li>
-                </ul>
-            </div>
-            <div class="v-visual"><div class="v-compare"><div class="v-compare-col" style="--c:#BAB0AC"><h3>Nube</h3><p>Computador</p><p>↓</p><p>Servidores del proveedor</p></div><div class="v-compare-col" style="--c:#4E79A7"><h3>Local</h3><p>Computador</p><p>↓</p><p>Modelo dentro del equipo</p></div></div></div>
-        </div>
+    <div class="cloud-body">
+        <dl class="terms">
+            <dt>Nube</dt>
+            <dd>El modelo se ejecuta en servidores del proveedor.</dd>
+            <dt>Local</dt>
+            <dd>El modelo se ejecuta en tu equipo. LM Studio y Ollama (2023) facilitan descargarlo y usarlo.</dd>
+        </dl>
+        <table class="cloud-table">
+            <thead><tr><td></td><th scope="col">Nube</th><th scope="col">Local</th></tr></thead>
+            <tbody>
+                <tr><th scope="row">Calidad</th><td class="win">La mejor disponible</td><td>Menor, limitada por el equipo</td></tr>
+                <tr><th scope="row">Privacidad</th><td>Tus datos van al proveedor</td><td class="win">Se quedan en tu máquina, si las herramientas también son locales</td></tr>
+                <tr><th scope="row">Costo</th><td>Suscripción o pago por uso</td><td class="win">Sin pago por uso una vez que tienes el equipo</td></tr>
+                <tr><th scope="row">Internet</th><td>Necesario</td><td class="win">No es necesario, una vez descargado el modelo</td></tr>
+                <tr><th scope="row">Herramientas agénticas<small>Buscar, actuar, conectores</small></th><td class="win">Vienen listas</td><td>Requieren configuración</td></tr>
+            </tbody>
+        </table>
+        <small class="v-note">● Ventaja en ese criterio.</small>
     </div>
+    <aside class="notes">Es una decisión crítica que depende del caso de aplicación. Los límites de un modelo local son la memoria, el formato y el rendimiento del equipo.</aside>
 </section>
