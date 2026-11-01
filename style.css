@@ -1994,3 +1994,63 @@ body {
 .voice-note.lost {
     border: 2px solid var(--tableau-orange)
 }
+
+.art-body {
+    display: grid;
+    grid-template-columns: 38% 1fr;
+    gap: 3%;
+    align-items: center;
+    height: 90%;
+    padding: 1.5% 2.5% 3.5%;
+    font-size: clamp(12px, 1.6vw, 2.9vh);
+    line-height: 1.25
+}
+
+.art-window {
+    flex: none;
+    height: 80%
+}
+
+.art-split {
+    flex: 1;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    min-height: 0
+}
+
+.art-split .cg-messages {
+    justify-content: flex-start;
+    gap: .8em;
+    border-right: 2px solid var(--tableau-gray)
+}
+
+.art-split .cg-messages .cg-user {
+    width: 92%
+}
+
+.art-reply {
+    padding: .55em .7em;
+    border-radius: .8em;
+    background: #e6e6e6
+}
+
+.art-quiz {
+    display: flex;
+    flex-direction: column;
+    gap: .55em;
+    padding: .7em .9em
+}
+
+.art-quiz span {
+    padding: .35em .6em;
+    border: 1px solid var(--tableau-gray);
+    border-radius: .4em
+}
+
+.art-quiz b {
+    padding: .4em;
+    border-radius: .4em;
+    background: var(--tableau-blue);
+    color: #fff;
+    text-align: center
+}
