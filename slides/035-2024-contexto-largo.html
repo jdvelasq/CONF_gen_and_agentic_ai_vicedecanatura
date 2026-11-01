@@ -1,19 +1,50 @@
-<section class="slide content" aria-label="Febrero de 2024: ventanas de contexto enormes">
+<section class="slide content" aria-label="2024: Gemini 1.5, la ventana de contexto de un millón de tokens">
     <header class="slide-heading">
-        <h2>Febrero de 2024: ventanas de contexto enormes</h2>
+        <h2>2024 · Gemini 1.5: la ventana de contexto de un millón de tokens</h2>
     </header>
-    <div class="content-body">
-        <p class="intro">Poder leer más no significa que convenga enviarlo todo.</p>
-        <div class="columns">
-            <div class="explanation">
-                <ul>
-                    <li>Gemini 1.5 lleva el contexto a la escala del millón de tokens.</li>
-                    <li>Permite analizar documentos muy largos.</li>
-                    <li>Enviar tanto es más lento y costoso que recuperar fragmentos relevantes.</li>
-                    <li>Más contexto puede añadir ruido.</li>
-                </ul>
-            </div>
-            <div class="v-visual"><div class="v-compare"><div class="v-compare-col" style="--c:#BAB0AC"><h3>Enviar todo</h3><p>Cientos de páginas</p><p>Más lento y costoso</p></div><div class="v-compare-col" style="--c:#4E79A7"><h3>Recuperar</h3><p>Tres fragmentos relevantes</p><p>Más rápido y enfocado</p></div></div></div>
+    <div class="win-body">
+        <div class="win-left">
+            <aside class="cg-start">Ahora el modelo podía procesar y relacionar una cantidad extraordinariamente grande de información dentro de una misma interacción.</aside>
+            <dl class="terms">
+                <dt>Febrero de 2024</dt>
+                <dd>Gemini 1.5 de Google llega a 1 millón de tokens de contexto, y más tarde a 2 millones en lista de espera.</dd>
+                <dt>¿Qué es la ventana?</dt>
+                <dd>Todo lo que el modelo tiene "a la vista" en una conversación: tus mensajes, los archivos que subiste y sus propias respuestas.</dd>
+                <dt>¿Para qué sirve?</dt>
+                <dd>Con ventanas grandes se puede subir un libro, un informe extenso o horas de transcripción, y preguntar sobre todo eso a la vez.</dd>
+                <dt>Limitación</dt>
+                <dd>Más contexto significa más lentitud y más consumo, y el modelo puede pasar por alto detalles en medio de mucho texto.</dd>
+            </dl>
+        </div>
+        <div class="win-chart">
+            <svg viewBox="0 0 560 420" role="img" aria-label="Ventana de contexto en tokens: Gemini 1.0 Pro, 32 mil; GPT-4 Turbo, 128 mil; Claude 2.1, 200 mil; Gemini 1.5 Pro, 1 millón.">
+                <g class="grid">
+                    <path d="M70 340H550M70 277.5H550M70 215H550M70 152.5H550M70 90H550"/>
+                    <text x="62" y="346">0</text><text x="62" y="283.5">250 mil</text><text x="62" y="221">500 mil</text><text x="62" y="158.5">750 mil</text><text x="62" y="96">1 millón</text>
+                </g>
+                <g fill="#4E79A7">
+                    <path d="M90 340v-4a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4v4z"><title>Gemini 1.0 Pro: 32 mil tokens</title></path>
+                    <path d="M210 340v-28a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4v28z"><title>GPT-4 Turbo: 128 mil tokens</title></path>
+                    <path d="M330 340v-46a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4v46z"><title>Claude 2.1: 200 mil tokens</title></path>
+                    <path d="M450 340V94a4 4 0 0 1 4-4h72a4 4 0 0 1 4 4v246z"><title>Gemini 1.5 Pro: 1 millón de tokens</title></path>
+                </g>
+                <g class="val"><text x="130" y="324">32 mil</text><text x="250" y="300">128 mil</text><text x="370" y="282">200 mil</text><text x="490" y="82">1 millón</text></g>
+                <g class="cat">
+                    <text x="130" y="364"><tspan font-weight="700">Gemini 1.0 Pro</tspan><tspan x="130" dy="20">Dic 2023</tspan></text>
+                    <text x="250" y="364"><tspan font-weight="700">GPT-4 Turbo</tspan><tspan x="250" dy="20">Nov 2023</tspan></text>
+                    <text x="370" y="364"><tspan font-weight="700">Claude 2.1</tspan><tspan x="370" dy="20">Nov 2023</tspan></text>
+                    <text x="490" y="364"><tspan font-weight="700">Gemini 1.5 Pro</tspan><tspan x="490" dy="20">Feb 2024</tspan></text>
+                </g>
+                <g class="note">
+                    <rect x="84" y="100" width="340" height="112" rx="8"/>
+                    <path d="M424 150L450 150"/>
+                    <text x="98" y="128">Un millón de tokens equivale a:</text>
+                    <text x="98" y="150">• Unas 700.000 palabras de texto</text>
+                    <text x="98" y="172">• Hasta una hora de video</text>
+                    <text x="98" y="194">• Unas 11 horas de audio</text>
+                </g>
+            </svg>
         </div>
     </div>
+    <aside class="notes">Poder leer más no significa que convenga enviarlo todo. Enviar tanto es más lento y costoso que recuperar fragmentos relevantes. También caben grandes cantidades de código fuente.</aside>
 </section>
