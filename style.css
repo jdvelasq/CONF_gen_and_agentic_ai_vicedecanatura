@@ -3036,3 +3036,7 @@ body {
     flex: 0 0 auto;
     margin-top: 0
 }
+
+.goals-body .goals {
+    margin-block: auto
+}
