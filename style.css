@@ -3000,3 +3000,39 @@ body {
 .columns > .v-visual {
     justify-content: flex-start
 }
+
+/* Las visuales propias caben en la columna derecha. */
+.columns > .v-visual > .cg-window {
+    flex: 0 0 auto;
+    min-height: 0
+}
+
+.columns > .v-visual > svg,
+.columns > .v-visual > .win-chart svg {
+    width: 100%;
+    height: auto
+}
+
+/* En la columna derecha, las columnas comparativas se reparten a lo ancho. */
+.columns > .v-visual > .sd-cols {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--min, 7em), 1fr));
+    width: 100%
+}
+
+.sd-full {
+    justify-content: flex-start;
+    height: auto
+}
+
+/* El contenido arranca cerca de la frase introductoria. */
+.goals,
+.roadmap {
+    flex: 0 0 auto;
+    margin-top: 1em
+}
+
+.v-full > ul {
+    flex: 0 0 auto;
+    margin-top: 0
+}

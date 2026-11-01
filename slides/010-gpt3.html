@@ -14,11 +14,7 @@
                     <li><strong>Límite:</strong> predecir tokens no garantiza seguir instrucciones.</li>
                 </ul>
             </div>
-            <div class="diagram" role="img" aria-label="Dos fases: el entrenamiento ocurre una sola vez y es muy costoso; produce un modelo que se usa en la inferencia cada vez que alguien hace una petición.">
-                <div class="diagram-node accent">Entrenamiento<small>Una sola vez y muy costoso</small></div>
-                <div class="diagram-arrow">↓ <small>Modelo entrenado</small></div>
-                <div class="diagram-node">Inferencia<small>Cada vez que alguien hace una petición</small></div>
-            </div>
+            <div class="v-visual"><ol class="sd-flow vertical" aria-label="Dos fases: entrenamiento e inferencia."><li class="sd-node" style="--c:var(--tableau-orange)"><h4>Entrenamiento</h4><p>Una sola vez y muy costoso</p></li><li class="sd-node"><h4>Modelo entrenado</h4></li><li class="sd-node" style="--c:var(--tableau-green)"><h4>Inferencia</h4><p>Cada vez que alguien hace una petición</p></li></ol></div>
         </div>
     </div>
 </section>

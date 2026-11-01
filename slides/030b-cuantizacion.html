@@ -2,17 +2,18 @@
     <header class="slide-heading">
         <h2>2023 · llama.cpp y cuantización: un modelo gigante en una laptop</h2>
     </header>
-    <div class="quant-body">
-        <div class="quant-top">
-            <aside class="cg-start">llama.cpp (marzo de 2023) permitió correr estos modelos sin GPU de servidor (chip especializado en cálculos de IA).</aside>
-            <aside class="cg-key"><strong>Idea clave:</strong><br>Cuanto más pequeño el modelo y más cuantizado, más rápido y liviano, pero menos capaz.</aside>
-        </div>
-        <ul class="quant-terms">
-            <li><strong>Cuantización:</strong> guardar los pesos con menos precisión para que ocupen menos memoria.</li>
-            <li><strong>GGUF:</strong> formato estándar para modelos locales.</li>
-            <li><strong>Q4, Q8:</strong> nivel de cuantización.</li>
-        </ul>
-        <div class="quant-levels" role="img" aria-label="Comparación ilustrativa: 16 bits usa toda la memoria con calidad máxima; 8 bits usa cerca de 60% de la memoria con calidad cercana a 85%; 4 bits usa cerca de 33% de la memoria con calidad cercana a 70%.">
+    <div class="content-body">
+        <p class="intro">llama.cpp (marzo de 2023) permitió correr estos modelos sin GPU de servidor (chip especializado en cálculos de IA).</p>
+        <div class="columns" style="grid-template-columns:.7fr 1.3fr">
+            <div class="explanation">
+                <ul>
+                    <li><strong>Cuantización:</strong> guardar los pesos con menos precisión para que ocupen menos memoria.</li>
+                    <li><strong>GGUF:</strong> formato estándar para modelos locales.</li>
+                    <li><strong>Q4, Q8:</strong> nivel de cuantización.</li>
+                    <li><strong>Idea clave:</strong> cuanto más pequeño el modelo y más cuantizado, más rápido y liviano, pero menos capaz.</li>
+                </ul>
+            </div>
+            <div class="v-visual"><div class="quant-levels" role="img" aria-label="Comparación ilustrativa: 16 bits usa toda la memoria con calidad máxima; 8 bits usa cerca de 60% de la memoria con calidad cercana a 85%; 4 bits usa cerca de 33% de la memoria con calidad cercana a 70%.">
             <div class="quant-level">
                 <div class="quant-card" style="--h:12em"><strong>16 bits</strong><span>modelo.gguf</span></div>
                 <p><span>Memoria</span><i style="--w:100%;--c:var(--tableau-blue)"></i></p>
@@ -24,11 +25,12 @@
                 <p><span>Calidad</span><i style="--w:85%;--c:var(--tableau-green)"></i></p>
             </div>
             <div class="quant-level">
-                <div class="quant-card" style="--h:4.2em"><strong>4 bits</strong><span>modelo-Q4.gguf</span></div>
+                <div class="quant-card" style="--h:5.6em"><strong>4 bits</strong><span>modelo-Q4.gguf</span></div>
                 <p><span>Memoria</span><i style="--w:33%;--c:var(--tableau-blue)"></i></p>
                 <p><span>Calidad</span><i style="--w:70%;--c:var(--tableau-green)"></i></p>
             </div>
         </div>
-        <small class="v-note">Proporciones ilustrativas</small>
+        <small class="v-note">Proporciones ilustrativas</small></div>
+        </div>
     </div>
 </section>
