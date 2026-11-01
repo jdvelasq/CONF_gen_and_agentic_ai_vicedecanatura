@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Galería de diagramas (skill slide-diagrams)</title>
+  <link rel="stylesheet" href="../../../style.css">
+  <!-- Abrir con un servidor desde la raíz del repo: python3 -m http.server 8000
+       y visitar /.claude/skills/slide-diagrams/gallery.html#1 (flechas para navegar). -->
+</head>
+<body>
+<main class="deck" aria-label="Galería de diagramas">
+
+<!-- 1. Secuencia lineal, 4 pasos, ancho completo -->
+<section class="slide content active" aria-label="Secuencia lineal con 4 pasos">
+  <header class="slide-heading"><h2>Secuencia lineal · 4 pasos</h2></header>
+  <div class="content-body">
+    <p class="intro">Pasos ordenados con inicio y fin: el contenido define cuántos pasos hay.</p>
+    <div class="sd-full">
+      <ol class="sd-flow" aria-label="Cuatro pasos de RAG">
+        <li class="sd-node"><span class="sd-num">1</span><h4>Preguntar</h4><p>La persona formula la consulta.</p></li>
+        <li class="sd-node" style="--c:var(--tableau-orange)"><span class="sd-num">2</span><h4>Recuperar</h4><p>Se buscan fragmentos relevantes en los documentos.</p></li>
+        <li class="sd-node" style="--c:var(--tableau-teal)"><span class="sd-num">3</span><h4>Aumentar</h4><p>Los fragmentos se agregan al prompt.</p></li>
+        <li class="sd-node" style="--c:var(--tableau-green)"><span class="sd-num">4</span><h4>Responder</h4><p>El modelo redacta con esas fuentes.</p></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 2. Secuencia con chevrones, 6 pasos -->
+<section class="slide content" aria-label="Secuencia con chevrones de 6 etapas">
+  <header class="slide-heading"><h2>Secuencia con chevrones · 6 etapas</h2></header>
+  <div class="content-body">
+    <p class="intro">Para fases de un proceso: texto corto en cada etapa.</p>
+    <div class="sd-full">
+      <ol class="sd-flow chevron" aria-label="Seis fases de un proyecto">
+        <li class="sd-node"><h4>Definir</h4></li>
+        <li class="sd-node" style="--c:var(--tableau-teal)"><h4>Explorar</h4></li>
+        <li class="sd-node" style="--c:var(--tableau-green)"><h4>Prototipar</h4></li>
+        <li class="sd-node" style="--c:var(--tableau-orange)"><h4>Evaluar</h4></li>
+        <li class="sd-node" style="--c:var(--tableau-red)"><h4>Ajustar</h4></li>
+        <li class="sd-node" style="--c:var(--tableau-purple)"><h4>Desplegar</h4></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 3. Secuencia vertical en columna visual -->
+<section class="slide content" aria-label="Secuencia vertical en la columna derecha">
+  <header class="slide-heading"><h2>Secuencia vertical · 3 pasos en columna</h2></header>
+  <div class="content-body">
+    <p class="intro">Texto a la izquierda y el diagrama a la derecha, como en el resto del deck.</p>
+    <div class="columns">
+      <div class="explanation"><ul>
+        <li>El agente decide la siguiente acción.</li>
+        <li>Ejecuta una herramienta y observa el resultado.</li>
+        <li>Repite hasta cumplir el objetivo.</li>
+      </ul></div>
+      <div class="v-visual">
+        <ol class="sd-flow vertical" aria-label="Ciclo simple de un agente">
+          <li class="sd-node"><h4>Razonar</h4><p>Elegir la acción siguiente</p></li>
+          <li class="sd-node" style="--c:var(--tableau-orange)"><h4>Actuar</h4><p>Llamar a una herramienta</p></li>
+          <li class="sd-node" style="--c:var(--tableau-green)"><h4>Observar</h4><p>Leer el resultado</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. Cascada, 4 niveles -->
+<section class="slide content" aria-label="Cascada de 4 niveles">
+  <header class="slide-heading"><h2>Cascada · 4 niveles</h2></header>
+  <div class="content-body">
+    <p class="intro">Pasos con dependencia: cada nivel se apoya en el anterior.</p>
+    <div class="columns">
+      <div class="explanation"><ul>
+        <li>Cada capa agrega una capacidad al modelo.</li>
+        <li>Sin la capa anterior, la siguiente no funciona.</li>
+      </ul></div>
+      <div class="v-visual">
+        <ol class="sd-cascade" aria-label="Capas de capacidad">
+          <li class="sd-node"><h4>Modelo base</h4><p>Completa texto</p></li>
+          <li class="sd-node" style="--c:var(--tableau-orange)"><h4>Asistente</h4><p>Sigue instrucciones</p></li>
+          <li class="sd-node" style="--c:var(--tableau-teal)"><h4>Con herramientas</h4><p>Actúa sobre el entorno</p></li>
+          <li class="sd-node" style="--c:var(--tableau-green)"><h4>Agente</h4><p>Persigue objetivos</p></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. Línea de tiempo alternada, 5 hitos -->
+<section class="slide content" aria-label="Línea de tiempo con 5 hitos">
+  <header class="slide-heading"><h2>Línea de tiempo · 5 hitos alternados</h2></header>
+  <div class="content-body">
+    <p class="intro">Eventos con fecha: se alternan arriba y abajo del eje.</p>
+    <div class="sd-full">
+      <ol class="sd-timeline" aria-label="Hitos de la IA generativa">
+        <li><div class="sd-body"><time>2017</time><h4>Transformer</h4><p>Atención como base</p></div></li>
+        <li style="--c:var(--tableau-orange)"><div class="sd-body"><time>2020</time><h4>GPT-3</h4><p>Escala del modelo</p></div></li>
+        <li style="--c:var(--tableau-teal)"><div class="sd-body"><time>2022</time><h4>ChatGPT</h4><p>Asistente masivo</p></div></li>
+        <li style="--c:var(--tableau-green)"><div class="sd-body"><time>2023</time><h4>Plugins</h4><p>Primeras herramientas</p></div></li>
+        <li style="--c:var(--tableau-purple)"><div class="sd-body"><time>2025</time><h4>Agentes</h4><p>De código y de uso general</p></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 6. Línea de tiempo con 9 hitos, todos debajo del eje -->
+<section class="slide content" aria-label="Línea de tiempo con 9 hitos">
+  <header class="slide-heading"><h2>Línea de tiempo · 9 hitos (.below)</h2></header>
+  <div class="content-body">
+    <p class="intro">Con muchos eventos conviene .below: todos los textos debajo del eje, sin alternar.</p>
+    <div class="sd-full">
+      <ol class="sd-timeline below" style="font-size:.85em" aria-label="Nueve años">
+        <li><div class="sd-body"><time>2017</time><h4>Transformer</h4></div></li>
+        <li><div class="sd-body"><time>2018</time><h4>BERT</h4></div></li>
+        <li><div class="sd-body"><time>2019</time><h4>GPT-2</h4></div></li>
+        <li><div class="sd-body"><time>2020</time><h4>GPT-3</h4></div></li>
+        <li><div class="sd-body"><time>2021</time><h4>Codex</h4></div></li>
+        <li><div class="sd-body"><time>2022</time><h4>ChatGPT</h4></div></li>
+        <li><div class="sd-body"><time>2023</time><h4>GPT-4</h4></div></li>
+        <li><div class="sd-body"><time>2024</time><h4>Multimodal</h4></div></li>
+        <li><div class="sd-body"><time>2025</time><h4>Agentes</h4></div></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<!-- 7. Línea de tiempo vertical -->
+<section class="slide content" aria-label="Línea de tiempo vertical con 4 hitos">
+  <header class="slide-heading"><h2>Línea de tiempo vertical · 4 hitos</h2></header>
+  <div class="content-body">
+    <p class="intro">Útil en la columna derecha cuando cada evento lleva texto.</p>
+    <div class="columns">
+      <div class="explanation"><ul>
+        <li>El eje vertical aprovecha la altura de la slide.</li>
+        <li>Cada evento puede tener dos líneas de detalle.</li>
+      </ul></div>
+      <div class="v-visual">
+        <ol class="sd-timeline vertical" aria-label="Hitos">
+          <li><div class="sd-body"><time>2022</time><h4>ChatGPT</h4><p>El asistente llega al público general.</p></div></li>
+          <li style="--c:var(--tableau-orange)"><div class="sd-body"><time>2023</time><h4>GPT-4 y Claude</h4><p>Modelos con mejor razonamiento.</p></div></li>
+          <li style="--c:var(--tableau-teal)"><div class="sd-body"><time>2024</time><h4>Multimodal</h4><p>Imagen, voz y documentos.</p></div></li>
+          <li style="--c:var(--tableau-green)"><div class="sd-body"><time>2025</time><h4>Agentes</h4><p>Planifican y actúan con herramientas.</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 8. Ciclo con 4 elementos en columna -->
+<section class="slide content" aria-label="Ciclo de 4 pasos">
+  <header class="slide-heading"><h2>Ciclo · 4 pasos</h2></header>
+  <div class="content-body">
+    <p class="intro">Pasos que se repiten: el último vuelve al primero.</p>
+    <div class="columns">
+      <div class="explanation"><ul>
+        <li>Se redacta el prompt.</li>
+        <li>Se revisa la respuesta.</li>
+        <li>Se ajusta y se repite.</li>
+      </ul></div>
+      <div class="v-visual">
+        <div class="sd-cycle" role="group" aria-label="Ciclo de iteración de prompts">
+          <ol>
+            <li><div class="sd-node"><h4>Escribir</h4></div></li>
+            <li style="--c:var(--tableau-orange)"><div class="sd-node"><h4>Probar</h4></div></li>
+            <li style="--c:var(--tableau-teal)"><div class="sd-node"><h4>Revisar</h4></div></li>
+            <li style="--c:var(--tableau-green)"><div class="sd-node"><h4>Ajustar</h4></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 9. Ciclo con 6 elementos y centro -->
+<section class="slide content" aria-label="Ciclo de 6 pasos con centro">
+  <header class="slide-heading"><h2>Ciclo · 6 pasos con concepto central</h2></header>
+  <div class="content-body">
+    <p class="intro">El número de pasos no está fijado: la posición y las flechas se calculan en CSS.</p>
+    <div class="sd-full">
+      <div class="sd-cycle" role="group" aria-label="Ciclo de desarrollo asistido">
+        <div class="sd-hub sd-node solid"><h4>Desarrollo asistido</h4></div>
+        <ol>
+          <li><div class="sd-node"><h4>Especificar</h4></div></li>
+          <li style="--c:var(--tableau-orange)"><div class="sd-node"><h4>Generar</h4></div></li>
+          <li style="--c:var(--tableau-red)"><div class="sd-node"><h4>Ejecutar</h4></div></li>
+          <li style="--c:var(--tableau-purple)"><div class="sd-node"><h4>Probar</h4></div></li>
+          <li style="--c:var(--tableau-teal)"><div class="sd-node"><h4>Revisar</h4></div></li>
+          <li style="--c:var(--tableau-green)"><div class="sd-node"><h4>Integrar</h4></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 10. Ciclo con 8 elementos -->
+<section class="slide content" aria-label="Ciclo de 8 pasos">
+  <header class="slide-heading"><h2>Ciclo · 8 pasos (límite recomendado)</h2></header>
+  <div class="content-body">
+    <p class="intro">Con 8 elementos los nodos se estrechan; más allá conviene dividir o agrupar.</p>
+    <div class="sd-full">
+      <div class="sd-cycle" style="--r:10em;font-size:.8em" role="group" aria-label="Ciclo de ocho pasos">
+        <ol>
+          <li><div class="sd-node"><h4>Objetivo</h4></div></li>
+          <li style="--c:var(--tableau-orange)"><div class="sd-node"><h4>Plan</h4></div></li>
+          <li style="--c:var(--tableau-red)"><div class="sd-node"><h4>Acción</h4></div></li>
+          <li style="--c:var(--tableau-purple)"><div class="sd-node"><h4>Observación</h4></div></li>
+          <li style="--c:var(--tableau-teal)"><div class="sd-node"><h4>Evaluación</h4></div></li>
+          <li style="--c:var(--tableau-green)"><div class="sd-node"><h4>Memoria</h4></div></li>
+          <li style="--c:var(--tableau-brown)"><div class="sd-node"><h4>Ajuste</h4></div></li>
+          <li style="--c:var(--tableau-blue)"><div class="sd-node"><h4>Resultado</h4></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 11. Organigrama -->
+<section class="slide content" aria-label="Organigrama de tres niveles">
+  <header class="slide-heading"><h2>Organigrama · 3 niveles</h2></header>
+  <div class="content-body">
+    <p class="intro">Relación padre-hijo: cada nodo puede tener cualquier número de hijos.</p>
+    <div class="sd-full">
+      <ul class="sd-tree" aria-label="Taxonomía de sistemas de IA">
+        <li><div class="sd-node solid">Sistemas de IA</div>
+          <ul>
+            <li><div class="sd-node" style="--c:var(--tableau-orange)">Modelos</div>
+              <ul>
+                <li><div class="sd-node" style="--c:var(--tableau-orange)">Base</div></li>
+                <li><div class="sd-node" style="--c:var(--tableau-orange)">Ajustados</div></li>
+                <li><div class="sd-node" style="--c:var(--tableau-orange)">Abiertos</div></li>
+              </ul></li>
+            <li><div class="sd-node" style="--c:var(--tableau-teal)">Asistentes</div>
+              <ul>
+                <li><div class="sd-node" style="--c:var(--tableau-teal)">Chat</div></li>
+                <li><div class="sd-node" style="--c:var(--tableau-teal)">Voz</div></li>
+              </ul></li>
+            <li><div class="sd-node" style="--c:var(--tableau-green)">Agentes</div>
+              <ul>
+                <li><div class="sd-node" style="--c:var(--tableau-green)">De código</div></li>
+                <li><div class="sd-node" style="--c:var(--tableau-green)">De navegador</div></li>
+                <li><div class="sd-node" style="--c:var(--tableau-green)">De escritorio</div></li>
+              </ul></li>
+          </ul></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 12. Radial con 5 satélites -->
+<section class="slide content" aria-label="Radial con 5 elementos">
+  <header class="slide-heading"><h2>Radial · 5 elementos alrededor de un concepto</h2></header>
+  <div class="content-body">
+    <p class="intro">Un concepto central con elementos asociados, sin orden de secuencia.</p>
+    <div class="sd-full">
+      <div class="sd-radial" role="group" aria-label="Componentes de un agente">
+        <div class="sd-hub sd-node solid"><h4>Agente</h4></div>
+        <ol>
+          <li><div class="sd-node"><h4>Modelo</h4><p>Razona y decide</p></div></li>
+          <li style="--c:var(--tableau-orange)"><div class="sd-node"><h4>Herramientas</h4><p>Actúan</p></div></li>
+          <li style="--c:var(--tableau-teal)"><div class="sd-node"><h4>Memoria</h4><p>Recuerda</p></div></li>
+          <li style="--c:var(--tableau-green)"><div class="sd-node"><h4>Contexto</h4><p>Informa</p></div></li>
+          <li style="--c:var(--tableau-purple)"><div class="sd-node"><h4>Permisos</h4><p>Limitan</p></div></li>
+        </ol>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 13. Radial con 3 satélites en columna -->
+<section class="slide content" aria-label="Radial con 3 elementos">
+  <header class="slide-heading"><h2>Radial · 3 elementos en la columna visual</h2></header>
+  <div class="content-body">
+    <p class="intro">También funciona con pocos elementos.</p>
+    <div class="columns">
+      <div class="explanation"><ul>
+        <li>Tres capacidades que se combinan.</li>
+        <li>Ninguna tiene prioridad sobre las demás.</li>
+      </ul></div>
+      <div class="v-visual">
+        <div class="sd-radial" role="group" aria-label="Tres capacidades">
+          <div class="sd-hub sd-node solid"><h4>Asistente</h4></div>
+          <ol>
+            <li><div class="sd-node"><h4>Texto</h4></div></li>
+            <li style="--c:var(--tableau-orange)"><div class="sd-node"><h4>Imagen</h4></div></li>
+            <li style="--c:var(--tableau-green)"><div class="sd-node"><h4>Voz</h4></div></li>
+          </ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 14. Matriz 2x2 -->
+<section class="slide content" aria-label="Matriz de dos por dos">
+  <header class="slide-heading"><h2>Matriz 2×2 · dos dimensiones</h2></header>
+  <div class="content-body">
+    <p class="intro">Clasificar elementos por dos ejes; las celdas pueden llevar listas.</p>
+    <div class="sd-full">
+      <div class="sd-matrix" aria-label="Priorización por impacto y esfuerzo">
+        <div class="sd-axis-y"><span>Bajo</span><b>Impacto</b><span>Alto</span></div>
+        <div class="sd-axis-x"><span>Bajo</span><b>Esfuerzo</b><span>Alto</span></div>
+        <div class="sd-node sd-cell" style="--c:var(--tableau-green)"><h4>Hacer ya</h4><ul><li>Plantillas de prompts</li><li>Resúmenes de reuniones</li></ul></div>
+        <div class="sd-node sd-cell" style="--c:var(--tableau-blue)"><h4>Planificar</h4><ul><li>Asistente con documentos propios</li></ul></div>
+        <div class="sd-node sd-cell" style="--c:var(--tableau-gray)"><h4>Ocasional</h4><ul><li>Corrección de estilo</li></ul></div>
+        <div class="sd-node sd-cell" style="--c:var(--tableau-red)"><h4>Descartar</h4><ul><li>Automatizar sin supervisión</li></ul></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 15. Matriz de 3 columnas -->
+<section class="slide content" aria-label="Matriz de tres columnas por dos filas">
+  <header class="slide-heading"><h2>Matriz · 3 columnas × 2 filas</h2></header>
+  <div class="content-body">
+    <p class="intro">La cuadrícula se amplía con --cols y --rows.</p>
+    <div class="sd-full">
+      <div class="sd-matrix" style="--cols:3" aria-label="Madurez por área">
+        <div class="sd-axis-y"><span>Bajo</span><b>Riesgo</b><span>Alto</span></div>
+        <div class="sd-axis-x"><span>Individual</span><b>Alcance</b><span>Organización</span></div>
+        <div class="sd-node sd-cell" style="--c:var(--tableau-green)"><h4>Borradores</h4></div>
+        <div class="sd-node sd-cell" style="--c:var(--tableau-teal)"><h4>Análisis de datos</h4></div>
+        <div class="sd-node sd-cell" style="--c:var(--tableau-blue)"><h4>Atención al cliente</h4></div>
+        <div class="sd-node sd-cell" style="--c:var(--tableau-orange)"><h4>Código</h4></div>
+        <div class="sd-node sd-cell" style="--c:var(--tableau-red)"><h4>Decisiones</h4></div>
+        <div class="sd-node sd-cell" style="--c:var(--tableau-purple)"><h4>Datos sensibles</h4></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 16. Columnas comparativas, 3 -->
+<section class="slide content" aria-label="Columnas comparativas de tres opciones">
+  <header class="slide-heading"><h2>Columnas comparativas · 3 opciones</h2></header>
+  <div class="content-body">
+    <p class="intro">Opciones con los mismos atributos; se ajustan al ancho disponible.</p>
+    <div class="sd-full">
+      <ul class="sd-cols" aria-label="Tres tipos de modelo">
+        <li class="sd-node" style="--c:var(--tableau-blue)"><span class="sd-num">1</span><h4>En la nube</h4><ul><li>Mayor capacidad</li><li>Datos salen de la organización</li><li>Costo por uso</li></ul></li>
+        <li class="sd-node" style="--c:var(--tableau-orange)"><span class="sd-num">2</span><h4>Abierto</h4><ul><li>Se puede ajustar</li><li>Requiere infraestructura</li><li>Control de la licencia</li></ul></li>
+        <li class="sd-node" style="--c:var(--tableau-green)"><span class="sd-num">3</span><h4>Local</h4><ul><li>Los datos no salen</li><li>Menor capacidad</li><li>Costo fijo del equipo</li></ul></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<!-- 17. Columnas con imagen, 5 -->
+<section class="slide content" aria-label="Cinco tarjetas con imagen">
+  <header class="slide-heading"><h2>Columnas · 5 tarjetas con imagen opcional</h2></header>
+  <div class="content-body">
+    <p class="intro">Si no hay imagen, simplemente se omite el elemento img.</p>
+    <div class="sd-full">
+      <ul class="sd-cols" style="--min:7em" aria-label="Cinco herramientas">
+        <li class="sd-node" style="--c:var(--tableau-blue)"><img class="sd-img" alt="Marcador de imagen" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 10'%3E%3Crect width='16' height='10' fill='%23d9e2ec'/%3E%3C/svg%3E"><h4>Chat</h4><p>Conversación abierta</p></li>
+        <li class="sd-node" style="--c:var(--tableau-orange)"><img class="sd-img" alt="Marcador de imagen" src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 10'%3E%3Crect width='16' height='10' fill='%23d9e2ec'/%3E%3C/svg%3E"><h4>Código</h4><p>Edita el repositorio</p></li>
+        <li class="sd-node" style="--c:var(--tableau-teal)"><h4>Documentos</h4><p>Sin imagen: se omite el marco</p></li>
+        <li class="sd-node" style="--c:var(--tableau-green)"><h4>Navegador</h4><p>Opera sitios web</p></li>
+        <li class="sd-node" style="--c:var(--tableau-purple)"><h4>Escritorio</h4><p>Controla aplicaciones</p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+<nav class="controls" aria-label="Navegación"><button id="prev" aria-label="Anterior">‹</button><span id="progress" aria-live="polite"></span><button id="next" aria-label="Siguiente">›</button></nav>
+<script>
+(() => {
+  const slides = [...document.querySelectorAll('.deck > .slide')];
+  const progress = document.getElementById('progress');
+  let current = 0;
+  const show = i => {
+    current = Math.max(0, Math.min(slides.length - 1, i));
+    slides.forEach((s, k) => s.classList.toggle('active', k === current));
+    progress.textContent = `${current + 1} / ${slides.length}`;
+    if (location.hash !== `#${current + 1}`) history.replaceState(null, '', `#${current + 1}`);
+  };
+  document.getElementById('prev').onclick = () => show(current - 1);
+  document.getElementById('next').onclick = () => show(current + 1);
+  document.addEventListener('keydown', e => {
+    if (['ArrowRight', 'PageDown', ' '].includes(e.key)) { e.preventDefault(); show(current + 1); }
+    if (['ArrowLeft', 'PageUp'].includes(e.key)) { e.preventDefault(); show(current - 1); }
+  });
+  window.addEventListener('hashchange', () => show(Number(location.hash.slice(1)) - 1));
+  show(Number.isInteger(Number(location.hash.slice(1)) - 1) && location.hash ? Number(location.hash.slice(1)) - 1 : 0);
+})();
+</script>
+</body>
+</html>

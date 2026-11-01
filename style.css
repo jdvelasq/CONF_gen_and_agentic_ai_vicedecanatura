@@ -2238,3 +2238,686 @@ body {
     justify-content: center;
     font-size: 1.1em
 }
+
+/* ==========================================================================
+   Diagramas tipo SmartArt (skill slide-diagrams)
+   Componentes sd-*: unidades em (escalan con la slide), color por --c
+   (paleta Tableau). Documentación: .claude/skills/slide-diagrams/
+   ========================================================================== */
+
+.sd-node {
+    --_c: var(--c, var(--tableau-blue));
+    background: color-mix(in srgb, var(--_c) 16%, #fff);
+    border: .12em solid var(--_c);
+    border-radius: .5em;
+    padding: .4em .6em;
+    text-align: center;
+    line-height: 1.2;
+    min-width: 0
+}
+
+.sd-node.solid {
+    background: var(--_c);
+    color: #fff
+}
+
+.sd-node h4 {
+    margin: 0;
+    font-size: 1em
+}
+
+.sd-node p {
+    margin: .25em 0 0;
+    font-size: .85em
+}
+
+.sd-node ul {
+    margin: .3em 0 0;
+    padding-left: 1.1em;
+    list-style: disc;
+    text-align: left;
+    font-size: .85em
+}
+
+.sd-num {
+    --_c: var(--c, var(--tableau-blue));
+    display: inline-grid;
+    place-items: center;
+    width: 1.6em;
+    height: 1.6em;
+    margin-bottom: .2em;
+    border-radius: 50%;
+    background: var(--_c);
+    color: #fff;
+    font-size: .9em;
+    font-weight: 700;
+    line-height: 1
+}
+
+.sd-node.solid .sd-num {
+    background: #fff;
+    color: var(--_c)
+}
+
+.sd-img {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    object-fit: cover;
+    border-radius: .35em
+}
+
+/* 1. Secuencia lineal: pasos con flechas (horizontal, .vertical o .chevron) */
+
+.sd-flow {
+    display: flex;
+    align-items: stretch;
+    gap: 2.2em;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.sd-flow > li {
+    position: relative;
+    flex: 1 1 0
+}
+
+.sd-flow > li + li::before {
+    content: "";
+    position: absolute;
+    left: -1.65em;
+    top: 50%;
+    width: 1.1em;
+    height: 1.3em;
+    transform: translateY(-50%);
+    background: var(--tableau-gray);
+    clip-path: polygon(0 0, 100% 50%, 0 100%)
+}
+
+.sd-flow.vertical {
+    flex-direction: column;
+    gap: 1.5em
+}
+
+.sd-flow.vertical > li + li::before {
+    left: 50%;
+    top: -1.4em;
+    transform: translateX(-50%) rotate(90deg)
+}
+
+.sd-flow.chevron {
+    gap: 0
+}
+
+.sd-flow.chevron > li {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: .6em 1.7em;
+    border: 0;
+    border-radius: 0;
+    background: var(--_c);
+    color: #fff;
+    clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 50%, calc(100% - 1em) 100%, 0 100%, 1em 50%)
+}
+
+.sd-flow.chevron > li:first-child {
+    padding-left: 1em;
+    clip-path: polygon(0 0, calc(100% - 1em) 0, 100% 50%, calc(100% - 1em) 100%, 0 100%)
+}
+
+.sd-flow.chevron > li + li {
+    margin-left: -.9em
+}
+
+.sd-flow.chevron > li + li::before {
+    display: none
+}
+
+.sd-flow.chevron .sd-num {
+    background: #fff;
+    color: var(--_c)
+}
+
+/* 2. Cascada: pasos escalonados, cada nivel más a la derecha */
+
+.sd-cascade {
+    display: flex;
+    flex-direction: column;
+    gap: .5em;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.sd-cascade > li {
+    --step: 2.2em;
+    width: fit-content;
+    min-width: 10em;
+    max-width: calc(100% - (var(--i) - 1) * var(--step));
+    margin-left: calc((var(--i) - 1) * var(--step));
+    text-align: left
+}
+
+/* 3. Línea de tiempo: eje con eventos alternados (.below: todos debajo; .vertical) */
+
+.sd-timeline {
+    position: relative;
+    display: grid;
+    grid-auto-flow: column;
+    grid-auto-columns: minmax(0, 1fr);
+    flex: 1 1 auto;
+    min-height: 12em;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.sd-timeline::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 50%;
+    height: .2em;
+    transform: translateY(-50%);
+    background: var(--tableau-gray)
+}
+
+.sd-timeline > li {
+    --_c: var(--c, var(--tableau-blue));
+    position: relative;
+    display: grid;
+    grid-template-rows: minmax(0, 1fr) auto minmax(0, 1fr);
+    justify-items: center;
+    padding: 0 .3em
+}
+
+.sd-timeline > li::before {
+    content: "";
+    grid-row: 2;
+    width: 1.1em;
+    height: 1.1em;
+    border: .18em solid #fff;
+    border-radius: 50%;
+    background: var(--_c);
+    box-shadow: 0 0 0 .12em var(--_c)
+}
+
+.sd-timeline .sd-body {
+    text-align: center;
+    line-height: 1.2
+}
+
+.sd-timeline > li:nth-child(odd) .sd-body {
+    grid-row: 1;
+    align-self: end;
+    padding-bottom: .6em
+}
+
+.sd-timeline > li:nth-child(even) .sd-body {
+    grid-row: 3;
+    align-self: start;
+    padding-top: .6em
+}
+
+.sd-timeline .sd-body time {
+    display: block;
+    color: var(--_c);
+    font-weight: 700
+}
+
+.sd-timeline .sd-body h4 {
+    margin: 0;
+    font-size: 1em
+}
+
+.sd-timeline .sd-body p {
+    margin: .2em 0 0;
+    font-size: .85em
+}
+
+.sd-timeline.below {
+    flex: 0 0 auto;
+    min-height: 0
+}
+
+.sd-timeline.below::before {
+    top: .55em
+}
+
+.sd-timeline.below > li {
+    grid-template-rows: 0 auto 1fr
+}
+
+.sd-timeline.below > li .sd-body {
+    grid-row: 3;
+    align-self: start;
+    padding: .6em 0 0
+}
+
+.sd-timeline.vertical {
+    display: flex;
+    flex-direction: column;
+    gap: .9em;
+    min-height: 0;
+    padding-left: 1.8em
+}
+
+.sd-timeline.vertical::before {
+    display: none
+}
+
+.sd-timeline.vertical > li:not(:last-child)::after {
+    content: "";
+    position: absolute;
+    left: -1.17em;
+    top: 1.5em;
+    bottom: -1em;
+    width: .2em;
+    background: var(--tableau-gray)
+}
+
+.sd-timeline.vertical > li {
+    display: block;
+    justify-items: normal;
+    padding: 0
+}
+
+.sd-timeline.vertical > li::before {
+    position: absolute;
+    left: -1.8em;
+    top: .1em
+}
+
+.sd-timeline.vertical > li .sd-body,
+.sd-timeline.vertical > li:nth-child(odd) .sd-body,
+.sd-timeline.vertical > li:nth-child(even) .sd-body {
+    padding: 0;
+    text-align: left
+}
+
+/* 4 y 6. Ciclo y radial: elementos sobre una circunferencia (n = 3 a 8) */
+
+.sd-cycle,
+.sd-radial {
+    --r: 8.5em;
+    --w-max: 7.5em;
+    position: relative;
+    width: calc(2 * var(--r) + var(--w-max) + 1em);
+    height: calc(2 * var(--r) + 4em);
+    margin: 0 auto;
+    font-size: .85em
+}
+
+.sd-cycle > ol,
+.sd-radial > ol {
+    position: absolute;
+    inset: 0;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.sd-cycle > ol > li,
+.sd-radial > ol > li {
+    --a: calc((var(--i) - 1) * 360deg / var(--n));
+    position: absolute;
+    left: calc(50% + var(--r) * sin(var(--a)));
+    top: calc(50% - var(--r) * cos(var(--a)));
+    width: 0;
+    height: 0
+}
+
+.sd-cycle > ol > li > .sd-node,
+.sd-radial > ol > li > .sd-node {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 1;
+    width: max-content;
+    min-width: 4.5em;
+    max-width: max(6.2em, min(var(--w-max), calc(2 * var(--r) * sin(180deg / var(--n)) * .9)));
+    transform: translate(-50%, -50%)
+}
+
+.sd-cycle::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: calc(2 * var(--r));
+    height: calc(2 * var(--r));
+    transform: translate(-50%, -50%);
+    border: .15em dashed var(--tableau-gray);
+    border-radius: 50%
+}
+
+.sd-cycle > ol > li::after {
+    --a2: calc(var(--a) + 180deg / var(--n));
+    content: "";
+    position: absolute;
+    left: calc(var(--r) * (sin(var(--a2)) - sin(var(--a))));
+    top: calc(-1 * var(--r) * (cos(var(--a2)) - cos(var(--a))));
+    width: 1em;
+    height: 1.1em;
+    transform: translate(-50%, -50%) rotate(var(--a2));
+    background: var(--tableau-gray);
+    clip-path: polygon(0 0, 100% 50%, 0 100%)
+}
+
+.sd-radial > ol > li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: var(--r);
+    border-top: .15em solid var(--tableau-gray);
+    transform-origin: 0 0;
+    transform: rotate(calc(var(--a) + 90deg))
+}
+
+.sd-hub {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    z-index: 2;
+    width: 7em;
+    transform: translate(-50%, -50%)
+}
+
+/* 5. Organigrama vertical: árbol de listas anidadas con conectores */
+
+.sd-tree,
+.sd-tree ul {
+    display: flex;
+    justify-content: center;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.sd-tree ul {
+    position: relative;
+    padding-top: 1.2em
+}
+
+.sd-tree li {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1.2em .35em 0
+}
+
+.sd-tree li::before,
+.sd-tree li::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 50%;
+    width: 50%;
+    height: 1.2em;
+    border-top: .12em solid var(--tableau-gray)
+}
+
+.sd-tree li::after {
+    right: auto;
+    left: 50%;
+    border-left: .12em solid var(--tableau-gray)
+}
+
+.sd-tree li:only-child::before,
+.sd-tree li:only-child::after {
+    display: none
+}
+
+.sd-tree li:only-child {
+    padding-top: 0
+}
+
+.sd-tree li:first-child::before,
+.sd-tree li:last-child::after {
+    border: 0
+}
+
+.sd-tree li:last-child::before {
+    border-right: .12em solid var(--tableau-gray)
+}
+
+.sd-tree ul::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 50%;
+    height: 1.2em;
+    border-left: .12em solid var(--tableau-gray)
+}
+
+.sd-tree > li {
+    padding-top: 0
+}
+
+.sd-tree > li::before,
+.sd-tree > li::after {
+    display: none
+}
+
+.sd-tree .sd-node {
+    max-width: 11em
+}
+
+/* 7. Matriz 2×2 (o más: --cols y --rows en el contenedor) */
+
+.sd-matrix {
+    display: grid;
+    grid-template-columns: auto repeat(var(--cols, 2), minmax(0, 1fr));
+    grid-template-rows: repeat(var(--rows, 2), minmax(0, 1fr)) auto;
+    gap: .5em;
+    flex: 1 1 auto;
+    min-height: 14em
+}
+
+.sd-matrix .sd-axis-y {
+    grid-column: 1;
+    grid-row: 1 / span var(--rows, 2);
+    display: flex;
+    justify-content: space-between;
+    padding-right: .4em;
+    border-right: .12em solid var(--tableau-gray);
+    transform: rotate(180deg);
+    writing-mode: vertical-rl;
+    font-size: .85em;
+    text-align: center
+}
+
+.sd-matrix .sd-axis-x {
+    grid-column: 2 / -1;
+    grid-row: calc(var(--rows, 2) + 1);
+    display: flex;
+    justify-content: space-between;
+    padding-top: .3em;
+    border-top: .12em solid var(--tableau-gray);
+    font-size: .85em
+}
+
+.sd-matrix .sd-axis-y b,
+.sd-matrix .sd-axis-x b {
+    color: #111
+}
+
+.sd-matrix .sd-axis-y span,
+.sd-matrix .sd-axis-x span {
+    color: #555
+}
+
+.sd-matrix .sd-cell {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: left
+}
+
+/* 8. Columnas comparativas: n tarjetas que se ajustan al ancho disponible */
+
+.sd-cols {
+    --min: 9em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(var(--min), 1fr));
+    gap: .7em;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.sd-cols > li {
+    display: flex;
+    flex-direction: column;
+    gap: .35em;
+    border-top-width: .4em;
+    text-align: left
+}
+
+.sd-cols > li > h4 {
+    margin: 0
+}
+
+.sd-cols > li > ul {
+    margin: 0
+}
+
+/* Colocación dentro de la columna visual de una slide de contenido */
+
+.columns > .v-visual > :is(.sd-flow, .sd-cascade, .sd-tree, .sd-cols, .sd-cycle, .sd-radial) {
+    align-self: center
+}
+
+.columns > .v-visual > .sd-flow:not(.vertical),
+.columns > .v-visual > .sd-cols {
+    font-size: .8em
+}
+
+/* Índice (--i) y total (--n) de hijos, calculados en CSS; admite hasta 12 elementos */
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :nth-child(1) {
+    --i: 1
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :nth-child(2) {
+    --i: 2
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :nth-child(3) {
+    --i: 3
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :nth-child(4) {
+    --i: 4
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :nth-child(5) {
+    --i: 5
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :nth-child(6) {
+    --i: 6
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :nth-child(7) {
+    --i: 7
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :nth-child(8) {
+    --i: 8
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :nth-child(9) {
+    --i: 9
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :nth-child(10) {
+    --i: 10
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :nth-child(11) {
+    --i: 11
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :nth-child(12) {
+    --i: 12
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(1),
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(1) ~ * {
+    --n: 1
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(2),
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(2) ~ * {
+    --n: 2
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(3),
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(3) ~ * {
+    --n: 3
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(4),
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(4) ~ * {
+    --n: 4
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(5),
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(5) ~ * {
+    --n: 5
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(6),
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(6) ~ * {
+    --n: 6
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(7),
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(7) ~ * {
+    --n: 7
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(8),
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(8) ~ * {
+    --n: 8
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(9),
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(9) ~ * {
+    --n: 9
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(10),
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(10) ~ * {
+    --n: 10
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(11),
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(11) ~ * {
+    --n: 11
+}
+
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(12),
+:is(.sd-flow, .sd-cascade, .sd-timeline, .sd-cols, .sd-cycle > ol, .sd-radial > ol) > :first-child:nth-last-child(12) ~ * {
+    --n: 12
+}
+
+/* Diagrama a todo el ancho, bajo el párrafo .intro (alternativa a .columns) */
+
+.sd-full {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 82%
+}
+
+.sd-full > :is(.sd-cycle, .sd-radial) {
+    font-size: 1em
+}
+
