@@ -1559,3 +1559,38 @@ body {
 .ext-note {
     margin: 0
 }
+
+.os-body {
+    display: grid;
+    grid-template-columns: 26% 1fr 26%;
+    gap: 2%;
+    align-items: start;
+    height: 90%;
+    padding: 1.2% 1.5% 3%;
+    font-size: clamp(12px, 1.6vw, 2.9vh);
+    line-height: 1.22
+}
+
+.os-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    list-style: none
+}
+
+.os-list li {
+    display: flex;
+    flex-direction: column;
+    padding: 1em;
+    border: 1px solid var(--tableau-gray);
+    border-radius: .5em;
+    background: #eee;
+    text-align: center
+}
+
+.os-list strong {
+    font-size: 1.25em
+}
