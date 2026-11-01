@@ -2156,9 +2156,9 @@ body {
     font-weight: 700
 }
 
-/* El diagrama arranca a la altura del texto que explica. */
+/* El diagrama se centra en vertical dentro de su columna. */
 .columns > .v-visual {
-    justify-content: flex-start
+    justify-content: center
 }
 
 /* Las slides sirven de consulta: el ejemplo ayuda a aplicar el concepto después. */
@@ -2995,10 +2995,13 @@ body {
     font-size: 1em
 }
 
-/* Las viñetas y la visual arrancan justo debajo de la frase introductoria. */
-.columns > .explanation,
-.columns > .v-visual {
+/* Las viñetas arrancan justo debajo de la frase introductoria; la visual se centra en vertical. */
+.columns > .explanation {
     justify-content: flex-start
+}
+
+.columns > .v-visual {
+    justify-content: center
 }
 
 /* Las visuales propias caben en la columna derecha. */
