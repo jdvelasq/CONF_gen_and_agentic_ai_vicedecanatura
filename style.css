@@ -2180,3 +2180,49 @@ body {
 .columns > .v-visual {
     font-size: 1.12em
 }
+
+/* Las dos columnas ocupan todo el alto disponible, no solo la parte superior. */
+.columns > .explanation {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 0
+}
+
+.columns > .explanation ul {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin: 0
+}
+
+.columns > .explanation li {
+    margin-bottom: 0
+}
+
+.columns > .v-visual {
+    justify-content: center
+}
+
+.columns > .v-visual > .diagram {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly
+}
+
+.columns > .v-visual > .v-table {
+    flex: 1;
+    height: 100%
+}
+
+.v-caption {
+    margin: 0;
+    font-weight: 700
+}
+
+.columns > .v-visual > .v-cards,
+.columns > .v-visual > .v-compare {
+    flex: 1
+}
