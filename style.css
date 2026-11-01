@@ -2776,6 +2776,7 @@ body {
     flex-direction: column;
     gap: .35em;
     border-top-width: .4em;
+    padding-block: .7em;
     text-align: left
 }
 
