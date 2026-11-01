@@ -1466,3 +1466,96 @@ body {
 .vision-pair b {
     font-size: 2em
 }
+
+.ext-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 90%;
+    padding: 1.2% 1.5% 3%;
+    font-size: clamp(12px, 1.5vw, 2.7vh);
+    line-height: 1.22
+}
+
+.ext-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 30%
+}
+
+.ext-top aside {
+    flex: 1
+}
+
+.ext-plugin {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5em
+}
+
+.ext-plugin > b {
+    font-size: 2.4em;
+    line-height: 1
+}
+
+.ext-notes {
+    display: flex;
+    flex-direction: column;
+    gap: .6em;
+    width: 32%
+}
+
+.ext-notes p {
+    margin: 0;
+    padding: .5em .7em;
+    border: 2px solid var(--tableau-orange);
+    border-radius: .5em;
+    font-size: .92em
+}
+
+.ext-box {
+    display: flex;
+    flex-direction: column;
+    min-width: 22%;
+    padding: .9em;
+    border: 1px solid var(--tableau-gray);
+    border-radius: .5em;
+    background: #eee;
+    text-align: center
+}
+
+.ext-box strong {
+    font-size: 1.35em
+}
+
+.ext-sum {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: .5em
+}
+
+.ext-sum div {
+    flex: 1;
+    padding: .55em .2em;
+    border: 2px solid var(--tableau-blue);
+    border-radius: .5em;
+    color: var(--tableau-blue);
+    font-size: 1.3em;
+    font-weight: 700;
+    text-align: center
+}
+
+.ext-sum .total {
+    background: var(--tableau-blue);
+    color: #fff
+}
+
+.ext-sum b {
+    font-size: 2em
+}
+
+.ext-note {
+    margin: 0
+}
