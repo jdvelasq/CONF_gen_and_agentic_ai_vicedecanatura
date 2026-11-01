@@ -1,0 +1,20 @@
+<section class="slide content" aria-label="Lo que el modelo tiene a la vista: el contexto">
+    <header class="slide-heading">
+        <h2>Lo que el modelo tiene a la vista: el contexto</h2>
+    </header>
+    <div class="content-body">
+        <p class="intro">El modelo responde con lo que está en su contexto; lo que no está, no lo tiene en cuenta.</p>
+        <div class="columns">
+            <div class="explanation">
+                <ul>
+                    <li><strong>Contexto:</strong> toda la información que el modelo recibe en una petición.</li>
+                    <li><strong>Ventana de contexto:</strong> cantidad máxima de tokens que puede considerar.</li>
+                    <li>Incluye instrucciones, historial, documentos y resultados.</li>
+                    <li><strong>Práctica:</strong> abre una conversación nueva al cambiar de tema.</li>
+                </ul>
+                <p class="v-example"><strong>Ejemplo:</strong> si en una conversación larga el modelo ignora una instrucción inicial, puede haber quedado fuera de la ventana: repítela o abre una conversación nueva.</p>
+            </div>
+            <div class="v-visual"><svg class="v-svg v-short" viewBox="0 0 480 190" role="img" aria-label="Una ventana de tamaño fijo contiene instrucciones, historial y documentos; el texto adicional queda fuera."><rect x="20" y="60" width="360" height="90" rx="6" fill="#fff" stroke="#222" stroke-width="3"/><rect x="30" y="75" width="90" height="60" fill="#4E79A7"/><text x="75.0" y="112" style="font-size:15px" fill="#fff">Instrucciones</text><rect x="125" y="75" width="110" height="60" fill="#F28E2B"/><text x="180.0" y="112" style="font-size:15px" fill="#111">Historial</text><rect x="240" y="75" width="130" height="60" fill="#76B7B2"/><text x="305.0" y="112" style="font-size:15px" fill="#111">Documentos</text><rect x="392" y="75" width="85" height="60" fill="#fff" stroke="#E15759" stroke-width="2" stroke-dasharray="6 4"/><text x="434" y="112" style="font-size:15px">Más texto</text><text x="200" y="40">Ventana de contexto</text><text x="434" y="175" style="font-size:15px">Queda fuera</text></svg></div>
+        </div>
+    </div>
+</section>
