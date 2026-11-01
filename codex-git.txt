@@ -1,0 +1,12 @@
+Comando para crear un commit local con identidad Git de Codex
+
+git -c user.name="Codex" \
+    -c user.email="267193182+codex@users.noreply.github.com" \
+    commit -m "codex: actualizar instrucciones de contribución"
+
+Notas:
+- Ejecutar desde el repositorio, después de preparar los cambios con git add.
+- Este comando configura nombre y correo solo para ese commit; no modifica la configuración global.
+- Para publicar el commit: git push origin main
+- Comprobar después en GitHub que el autor asociado al commit sea @codex.
+- No reescribir el historial existente.
