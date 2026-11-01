@@ -4,17 +4,14 @@
     </header>
     <div class="content-body">
         <p class="intro">Antes de pegar información en un asistente, hay que saber a dónde va, quién la ve y cuánto tiempo se conserva.</p>
-        <div class="columns">
-            <div class="explanation">
-                <ul>
-                    <li><strong>Lo que entra:</strong> prompts, archivos, capturas y contenido de conectores.</li>
-                    <li><strong>Dónde se procesa:</strong> nube del proveedor o equipo propio.</li>
-                    <li><strong>Qué ocurre después:</strong> historial, memoria, conservación y entrenamiento.</li>
-                    <li><strong>Entrenamiento con datos:</strong> uso de tus contenidos para mejorar modelos futuros.</li>
-                </ul>
-                <p class="v-example"><strong>Ejemplo:</strong> un contrato pegado en un chat entra como prompt, puede quedar en el historial y, según el plan, servir para entrenar.</p>
-            </div>
-            <div class="v-visual"><div class="diagram compact" role="img" aria-label="Flujo: Asistente, Procesamiento, Almacenamiento, Posible entrenamiento."><div class="diagram-node">Asistente</div><div class="diagram-arrow">↓ </div><div class="diagram-node accent">Procesamiento</div><div class="diagram-arrow">↓ </div><div class="diagram-node">Almacenamiento</div><div class="diagram-arrow">↓ </div><div class="diagram-node">Posible entrenamiento</div></div></div>
+        <div class="sd-full">
+            <ol class="sd-flow" aria-label="Recorrido de tus datos: asistente, procesamiento, almacenamiento y posible entrenamiento.">
+                <li class="sd-node"><span class="sd-num">1</span><h4>Asistente</h4><p>Entran prompts, archivos, capturas y contenido de conectores.</p></li>
+                <li class="sd-node" style="--c:var(--tableau-teal)"><span class="sd-num">2</span><h4>Procesamiento</h4><p>En la nube del proveedor o en tu equipo.</p></li>
+                <li class="sd-node" style="--c:var(--tableau-orange)"><span class="sd-num">3</span><h4>Almacenamiento</h4><p>Historial, memoria y tiempo de conservación.</p></li>
+                <li class="sd-node" style="--c:var(--tableau-red)"><span class="sd-num">4</span><h4>Posible entrenamiento</h4><p>Uso de tus contenidos para mejorar modelos futuros.</p></li>
+            </ol>
+            <p class="v-example"><strong>Ejemplo:</strong> un contrato pegado en un chat entra como prompt, puede quedar en el historial y, según el plan, servir para entrenar.</p>
         </div>
     </div>
 </section>
