@@ -8,29 +8,26 @@
             <div class="explanation">
                 <ul>
                     <li><strong>Cuantización:</strong> guardar los pesos con menos precisión para que ocupen menos memoria.</li>
-                    <li><strong>GGUF:</strong> formato estándar para modelos locales.</li>
+                    <li><strong>GGUF:</strong> formato común en llama.cpp y aplicaciones compatibles.</li>
                     <li><strong>Q4, Q8:</strong> nivel de cuantización.</li>
-                    <li><strong>Idea clave:</strong> cuanto más pequeño el modelo y más cuantizado, más rápido y liviano, pero menos capaz.</li>
+                    <li><strong>Idea clave:</strong> menos bits reducen la memoria de los pesos; el cambio en calidad y velocidad depende del método, del equipo y de la tarea.</li>
                 </ul>
             </div>
-            <div class="v-visual"><div class="quant-levels" role="img" aria-label="Comparación ilustrativa: 16 bits usa toda la memoria con calidad máxima; 8 bits usa cerca de 60% de la memoria con calidad cercana a 85%; 4 bits usa cerca de 33% de la memoria con calidad cercana a 70%.">
+            <div class="v-visual"><div class="quant-levels" role="img" aria-label="Comparación ilustrativa del mismo modelo: 16 bits usa toda la memoria; 8 bits, cerca de 60%; 4 bits, cerca de 33%.">
             <div class="quant-level">
                 <div class="quant-card" style="--h:12em"><strong>16 bits</strong><span>modelo.gguf</span></div>
                 <p><span>Memoria</span><i style="--w:100%;--c:var(--tableau-blue)"></i></p>
-                <p><span>Calidad</span><i style="--w:100%;--c:var(--tableau-green)"></i></p>
             </div>
             <div class="quant-level">
                 <div class="quant-card" style="--h:7.2em"><strong>8 bits</strong><span>modelo-Q8.gguf</span></div>
                 <p><span>Memoria</span><i style="--w:60%;--c:var(--tableau-blue)"></i></p>
-                <p><span>Calidad</span><i style="--w:85%;--c:var(--tableau-green)"></i></p>
             </div>
             <div class="quant-level">
                 <div class="quant-card" style="--h:5.6em"><strong>4 bits</strong><span>modelo-Q4.gguf</span></div>
                 <p><span>Memoria</span><i style="--w:33%;--c:var(--tableau-blue)"></i></p>
-                <p><span>Calidad</span><i style="--w:70%;--c:var(--tableau-green)"></i></p>
             </div>
         </div>
-        <small class="v-note">Proporciones ilustrativas</small></div>
+        <small class="v-note">Proporciones ilustrativas de memoria. El cambio en calidad debe medirse con ejemplos propios.</small></div>
         </div>
     </div>
 </section>
