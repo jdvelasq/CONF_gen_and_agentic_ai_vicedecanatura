@@ -2959,7 +2959,8 @@ body {
 .columns > .v-visual > .diagram,
 .columns > .v-visual > .v-table,
 .columns > .v-visual > .v-cards,
-.columns > .v-visual > .v-compare {
+.columns > .v-visual > .v-compare,
+.columns > .v-visual > .sd-timeline.vertical {
     flex: 0 0 auto;
     height: auto
 }
