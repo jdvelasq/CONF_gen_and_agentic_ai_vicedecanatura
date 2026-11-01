@@ -965,10 +965,6 @@ body {
 }
 
 /* Piloto UX: frase dominante, figura central y texto legible a distancia. */
-.notes {
-    display: none
-}
-
 .stage {
     margin-left: auto;
     padding: .25em .7em;
