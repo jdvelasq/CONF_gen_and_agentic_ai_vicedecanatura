@@ -1594,3 +1594,46 @@ body {
 .os-list strong {
     font-size: 1.25em
 }
+
+.lock-group {
+    display: flex;
+    flex-direction: column;
+    gap: .5em
+}
+
+.lock-head {
+    display: flex;
+    align-items: center;
+    gap: .7em
+}
+
+.lock-head svg {
+    width: 3.6em;
+    fill: none;
+    stroke: #444;
+    stroke-width: 4
+}
+
+.lock-head div {
+    display: flex;
+    flex-direction: column
+}
+
+.lock-head strong {
+    font-size: 1.4em
+}
+
+.lock-head span {
+    color: #444;
+    font-size: 1.1em
+}
+
+.lock-chips {
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    gap: .4em
+}
+
+.lock-note {
+    margin: 0
+}

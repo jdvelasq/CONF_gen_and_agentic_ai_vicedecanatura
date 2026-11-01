@@ -45,7 +45,9 @@
         throw new Error('slides.json debe contener una lista de nombres HTML válidos.');
       }
       const fragments = await Promise.all(filenames.map(async filename => {
-        const result = await fetch(`slides/${filename}`, { cache: 'no-store' });
+        // Cargar decenas de slides en paralelo puede cortar conexiones sueltas.
+        const result = await fetch(`slides/${filename}`, { cache: 'no-store' })
+          .catch(() => fetch(`slides/${filename}`, { cache: 'no-store' }));
         if (!result.ok) throw new Error(`No se pudo cargar ${filename} (${result.status})`);
         const documentFragment = new DOMParser().parseFromString(await result.text(), 'text/html');
         const section = documentFragment.body.querySelector(':scope > section.slide');
