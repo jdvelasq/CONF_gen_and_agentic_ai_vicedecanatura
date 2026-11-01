@@ -2921,3 +2921,57 @@ body {
     font-size: 1em
 }
 
+
+/* Tamaño máximo del texto del cuerpo: 18px con la slide a 1280x720. */
+:root {
+    --body-text: clamp(11px, 1.4vw, 2.5vh)
+}
+
+.content-body {
+    font-size: var(--body-text)
+}
+
+.columns > .explanation {
+    font-size: 1em;
+    justify-content: center
+}
+
+.columns > .explanation ul {
+    flex: 0 1 auto;
+    display: block
+}
+
+.columns > .explanation li {
+    margin-bottom: .45em
+}
+
+.columns > .v-visual {
+    font-size: 1em
+}
+
+.columns > .v-visual > .v-cards .v-card,
+.columns > .v-visual > .v-compare .v-compare-col {
+    font-size: 1em
+}
+
+/* El espacio libre es válido: tablas, tarjetas y diagramas conservan su tamaño natural. */
+.columns > .v-visual > .diagram,
+.columns > .v-visual > .v-table,
+.columns > .v-visual > .v-cards,
+.columns > .v-visual > .v-compare {
+    flex: 0 0 auto;
+    height: auto
+}
+
+.columns > .v-visual > .diagram {
+    justify-content: flex-start
+}
+
+.ux-key {
+    font-size: 1.6vw
+}
+
+.ux-side,
+.ux-tiles {
+    font-size: var(--body-text)
+}
