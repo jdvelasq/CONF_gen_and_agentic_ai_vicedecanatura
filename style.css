@@ -2155,3 +2155,8 @@ body {
     margin: 0;
     font-weight: 700
 }
+
+/* El diagrama arranca a la altura del texto que explica. */
+.columns > .v-visual {
+    justify-content: flex-start
+}
