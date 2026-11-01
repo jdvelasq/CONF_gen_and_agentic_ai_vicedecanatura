@@ -2975,3 +2975,22 @@ body {
 .ux-tiles {
     font-size: var(--body-text)
 }
+
+/* Interlineado equivalente a Word: 1,5 por defecto y 1,15 en columnas densas. */
+.columns > .explanation {
+    line-height: 1.7
+}
+
+.columns > .explanation:has(.v-example),
+.columns > .explanation:has(li:nth-child(5)) {
+    line-height: 1.32
+}
+
+/* El tamaño máximo es para el texto: las visuales pueden ser mayores. */
+.columns > .v-visual {
+    font-size: 1.25em
+}
+
+.columns > .v-visual > .sd-cycle {
+    font-size: 1em
+}
